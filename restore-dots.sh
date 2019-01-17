@@ -1,5 +1,5 @@
 # Just put on $HOME and execute.
-# Restores git files from linked repositorie and backups up pre existing files to folder 'dot-files-backup'
+# Restores git files from linked repositorie and backs up pre existing files to created folder 'dot-files-backup'
 
 mkdir -p .dots-repo
 git clone --bare https://github.com/vdufloth/dots-repo.git $HOME/.dots-repo
