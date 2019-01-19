@@ -5,3 +5,9 @@ find . -type f -iname *.py -exec grep -i -n function {} +
 pacmd list-sinks
 
 pacmd set-default-sink "sinkname"
+
+#Install java
+
+add-apt-repository ppa:webupd8team/java
+apt-get update
+apt-get install oracle-java8-installer
