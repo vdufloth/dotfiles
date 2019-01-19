@@ -3,7 +3,14 @@
 # for examples
 
 # set -o vi #Activates vi mode with <Escape>
-shopt -s autocd #Allows to cd into directory by typing the directory name
+#Allows to cd into directory by typing the directory name
+shopt -s autocd 
+
+#If set, an argument to the cd builtin command that is not a directory is assumed to be  the  name of a variable whose value is the directory to change to.
+shopt -s cdable_vars 
+
+export urid=$HOME/Documents/URI
+
 HISTSIZE= HISTFILESIZE= #infinite history
 export HISTTIMEFORMAT="%d/%m/%y %T " #Adds time to history
 alias starwars='telnet towel.blinkenlights.nl'
