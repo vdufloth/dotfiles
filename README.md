@@ -1,3 +1,2 @@
 # My Personal Dotfiles
-
-Backup and centralization of configuration files, bashcripts and usefull or repetitive commands
+Centralized backup of my configuration files, bashscripts, and other usefull or repetitive commands.
