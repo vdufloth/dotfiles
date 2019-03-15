@@ -1,3 +1,9 @@
+#    _               _              
+#   | |__   __ _ ___| |__  _ __ ___ 
+#   | '_ \ / _` / __| '_ \| '__/ __|
+#  _| |_) | (_| \__ \ | | | | | (__ 
+# (_)_.__/ \__,_|___/_| |_|_|  \___|
+# 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -16,10 +22,14 @@ export HISTTIMEFORMAT="%d/%m/%y %T " #Adds time to history
 alias starwars='telnet towel.blinkenlights.nl'
 #Youtube Audio
 alias yta='youtube-dl -f bestaudio --extract-audio --audio-format mp3 -o "/home/$USER/Music/%(title)s.%(ext)s" -i' #downloads best quality mp3 of youtube video with the video name and puts it in Music folder
+#Youtube Video
+alias ytv='youtube-dl -f best -o "/home/$USER/Videos/%(title)s.%(ext)s" -i' #downloads best quality mp4 of youtube video with the video name and puts it in Music folder
 #Music Player
 alias mp='ncmpcpp'
 #Dot's file git
 alias dots-git='/usr/bin/git --git-dir=$HOME/.dots-repo/ --work-tree=$HOME'
+#Sync Uri: calls Rclone to backup uri Directory to google drive
+alias SURI='rclone sync $HOME/Documents/URI uriDrive:NoteBKP/URI'
 
 # If not running interactively, don't do anything
 case $- in
@@ -129,4 +139,4 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
-fi
+fi                                 
