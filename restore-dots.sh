@@ -1,12 +1,12 @@
 # Just put on $HOME and execute.
 # Restores git files from linked repositorie and backs up pre existing files to created folder 'dot-files-backup'
 
-mkdir -p .dots-repo
-git clone --bare https://github.com/vdufloth/dots-repo.git $HOME/.dots-repo
+mkdir -p .dotfiles-git
+git clone --bare https://github.com/vdufloth/dotfiles.git $HOME/.dotfiles-git
 function dots-git {
    /usr/bin/git --git-dir=$HOME/.dots-repo/ --work-tree=$HOME $@
 }
-mkdir -p .dot-files-backup
+mkdir -p .dotfiles-backup
 dots-git checkout
 if [ $? = 0 ]; then
   echo "Checked out.";
