@@ -27,7 +27,7 @@ alias ytv='youtube-dl -f best -o "/home/$USER/Videos/%(title)s.%(ext)s" -i' #dow
 #Music Player
 alias mp='ncmpcpp'
 #Dot's file git
-alias dots-git='/usr/bin/git --git-dir=$HOME/.dots-repo/ --work-tree=$HOME'
+alias dgit='/usr/bin/git --git-dir=$HOME/.dots-repo/ --work-tree=$HOME'
 #Sync Uri: calls Rclone to backup uri Directory to google drive
 alias SURI='rclone sync $HOME/Documents/URI uriDrive:NoteBKP/URI'
 
